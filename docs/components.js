@@ -1,31 +1,45 @@
 module.exports = {
     components:{
         schemas:{
-            User:{
+            Task:{
                 type:'object',
                 properties:{
                     _id:{
                         type:'objectId',
-                        description:"user identification number",
+                        description:"task identification number",
                         example:"6201064b0028de7866e2b2c4"
                     },
-                    username:{
+                    title:{
                         type:'string',
-                        description:"username to register",
-                        example:"John"
-                    },
-  email:{
-                        type:'string',
-                        description:"email to register",
-                        example:"john@gmail.com"
-                    },
-  email:{
-                        type:'string',
-                        description:"user password",
-                        example:"123456"
-                    },
-                }
+                        description:"task's title",
+                        example:"La chispa adecuada"
+                    }, 
+                    completed:{    
+                        type:'boolean',
+                        description:"marcar si esta hecha",
+                        example: false,
+                    }
+                    }
+                },
+            TaskInput:{
+                title:{
+                    type:'string',
+                    description:"task's title",
+                    example:"La chispa adecuada"
+                }, 
+                completed:{    
+                    type:'boolean',
+                    description:"marcar si esta hecha",
+                    example: false,
+                } 
+            },
+            _id:{
+                type:'objectId',
+                description:"task identification number",
+                example:"6201064b0028de7866e2b2c4"
+            },
+
             }
         }
     }
-}
+
